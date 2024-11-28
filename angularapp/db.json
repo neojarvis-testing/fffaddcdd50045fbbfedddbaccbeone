@@ -1,0 +1,25 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Save student details",
+      "description": "All the students details should be saved in the database.",
+      "dueDate": "25-11-2023",
+      "status": "Active"
+    },
+    {
+      "id": 2,
+      "title": "Save Employee details",
+      "description": "All the employee details should be saved in the database.",
+      "dueDate": "25-11-2023",
+      "status": "Active"
+    },
+    {
+      "id": 3,
+      "title": "Save associate details",
+      "description": "All the associate details should be saved in the database.",
+      "dueDate": "25-11-2023",
+      "status": "Active"
+    }
+  ]
+}

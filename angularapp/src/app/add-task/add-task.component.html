@@ -1,0 +1,40 @@
+<form [formGroup]="taskForm" (ngSubmit)="addNewTask()">
+  <table>
+    <tr>
+      <td>Task Title :</td>
+      <td><input class="form-control" type="text" placeholder="Enter title" formControlName="title"></td>
+      <div *ngIf="taskForm.get('title')!.invalid && taskForm.get('title')!.touched">
+        <div *ngIf="taskForm.get('title')!.hasError('title')">Title is required.</div>
+      </div>
+    </tr>
+    <tr>
+      <td>Task Description</td>
+      <td><input class="form-control" type="text" placeholder="Enter description" formControlName="description"></td>
+      <div *ngIf="taskForm.get('description')!.invalid && taskForm.get('description')!.touched">
+        <div *ngIf="taskForm.get('description')!.hasError('description')">Description is required.</div>
+      </div>
+    </tr>
+    <tr>
+      <td>Task Status:</td>
+      <td><input class="form-control" type="text" placeholder="Enter status" formControlName="status"></td>
+      <div *ngIf="taskForm.get('status')!.invalid && taskForm.get('status')!.touched">
+        <div *ngIf="taskForm.get('status')!.hasError('status')">Status is required.</div>
+      </div>    
+    </tr>
+    <tr>
+      <td>Task DueDate</td>
+      <td><input class="form-control" type="text" placeholder="Enter due date" formControlName="dueDate"></td>
+      <div *ngIf="taskForm.get('dueDate')!.invalid && taskForm.get('dueDate')!.touched">
+        <div *ngIf="taskForm.get('dueDate')!.hasError('dueDate')">Due Date is required.</div>
+        <div *ngIf="taskForm.get('dueDate')!.hasError('pattern')">Invalid Date Format (DD-MM-YYYY).</div>
+      </div>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <button class="btn btn-danger" type="submit" [disabled]="taskForm.invalid">Add task</button>
+      </td>
+    </tr>
+  </table>
+</form>
+
+  
