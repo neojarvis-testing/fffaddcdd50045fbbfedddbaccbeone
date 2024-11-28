@@ -1,0 +1,23 @@
+<!-- task-list.component.html -->
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Duedate</th>
+      <th>Status</th>
+      <!-- Include a column for Delete button if needed -->
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let task of tasks">
+      <td>{{ task.title }}</td>
+      <td>{{ task.description }}</td>
+      <td>{{ task.dueDate }}</td>
+      <td>{{ task.status }}</td>
+      <!-- Include a cell for Delete button if needed -->
+      <td><button (click)="deleteTask(task.id)">Delete</button></td>
+    </tr>
+  </tbody>
+</table>
