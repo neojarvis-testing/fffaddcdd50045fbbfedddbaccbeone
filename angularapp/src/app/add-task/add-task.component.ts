@@ -23,20 +23,20 @@ export class AddTaskComponent implements OnInit {
   }
   ngOnInit(): void {
   }
-  // addNewTask() {
-  //   if (this.taskForm.valid) {
-  //     console.log(this.taskForm.value);
-  //     try{
-  //       this.taskService.addTask(this.taskForm.value)
-  //         .subscribe((res) => {
-  //          console.log(res)
-  //           // this.tasks = res
-  //         },(err)=>{
-  //           console.log(err)
-  //         });
-  //     }catch(err){
-  //       console.log("Err",err)
-  //     }
+  addNewTask() {
+    if (this.taskForm.valid) {
+      console.log(this.taskForm.value);
+      try{
+        this.taskService.addTask(this.taskForm.value)
+          .subscribe((res) => {
+           console.log(res)
+            // this.tasks = res
+          },(err)=>{
+            console.log(err)
+          });
+      }catch(err){
+        console.log("Err",err)
+      }
     }
   }
 
